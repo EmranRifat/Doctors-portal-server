@@ -145,7 +145,7 @@ async function run() {
               return res.send({ success: false, booking: exists })
             }
             const result = await bookingCollection.insertOne(booking);
-            sendAppointmentEmail(booking);
+           
             return res.send({ success: true, result });
 
           });
